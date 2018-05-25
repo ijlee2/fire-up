@@ -1,0 +1,7 @@
+{{! We can have expression within Handlebars expression using parentheses. }}
+{{! We use helpers called hash and component. }}
+{{yield (hash
+    title=(component 'atx-page-header/title')
+    subtitle=(component 'atx-page-header/subtitle')
+    info=(component 'atx-page-header/info')
+)}}

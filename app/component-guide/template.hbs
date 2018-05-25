@@ -1,7 +1,23 @@
 {{#freestyle-guide title="My Living Style Guide" subtitle="Showcasing My App's Components"}}
   {{#freestyle-section name="UI Elements"}}
-    {{#freestyle-usage "loading-spinner" title="Loading Spinner"}}
-      {{loading-spinner}}
+    {{#freestyle-usage "atx-page-header" title="Page Header"}}
+
+      {{! We will create a block component to give developers more flexibility. }}
+      {{! Also try creating contextual component. }}
+      {{#atx-page-header as |pageHeader|}}
+        {{#pageHeader.title}}
+          Location
+        {{/pageHeader.title}}
+
+        {{#pageHeader.subtitle}}
+          Galvanize
+        {{/pageHeader.subtitle}}
+
+        {{#pageHeader.info}}
+          119 Nueces St, Austin, TX 78701
+        {{/pageHeader.info}}
+      {{/atx-page-header}}
+
     {{/freestyle-usage}}
   {{/freestyle-section}}
 {{/freestyle-guide}}
