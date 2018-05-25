@@ -1,0 +1,15 @@
+body {
+    color: black;
+    font-family: sans-serif;
+
+    .atx-page-header {
+        &__title {
+            text-transform: uppercase;
+            color: orangered;
+        }
+
+        &__subtitle {
+            text-transform: uppercase;
+        }
+    }
+}

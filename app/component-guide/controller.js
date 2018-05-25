@@ -1,8 +1,6 @@
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
 import FreestyleController from 'ember-freestyle/controllers/freestyle';
 
-const { inject } = Ember;
-
 export default FreestyleController.extend({
-  emberFreestyle: inject.service(),
+  emberFreestyle: service(),
 });
