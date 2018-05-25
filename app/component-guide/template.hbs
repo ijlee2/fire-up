@@ -1,23 +1,57 @@
 {{#freestyle-guide title="My Living Style Guide" subtitle="Showcasing My App's Components"}}
   {{#freestyle-section name="UI Elements"}}
-    {{#freestyle-usage "atx-page-header" title="Page Header"}}
 
-      {{! We will create a block component to give developers more flexibility. }}
-      {{! Also try creating contextual component. }}
-      {{#atx-page-header as |pageHeader|}}
-        {{#pageHeader.title}}
-          Location
-        {{/pageHeader.title}}
+    {{#freestyle-collection title="Page Header" as |collection|}}
 
-        {{#pageHeader.subtitle}}
-          Galvanize
-        {{/pageHeader.subtitle}}
+      {{#collection.variant key="default"}}
+        {{#freestyle-usage "atx-page-header-default" title="Page Header - Default"}}
+          {{! We will create a block component to give developers more flexibility. }}
+          {{! Also try creating contextual component. }}
+          {{#atx-page-header as |pageHeader|}}
+            {{#pageHeader.title}}
+              Location
+            {{/pageHeader.title}}
 
-        {{#pageHeader.info}}
-          119 Nueces St, Austin, TX 78701
-        {{/pageHeader.info}}
-      {{/atx-page-header}}
+            {{#pageHeader.subtitle}}
+              Galvanize
+            {{/pageHeader.subtitle}}
 
-    {{/freestyle-usage}}
+            {{#pageHeader.info}}
+              119 Nueces St, Austin, TX 78701
+            {{/pageHeader.info}}
+          {{/atx-page-header}}
+        {{/freestyle-usage}}
+      {{/collection.variant}}
+
+      {{#collection.variant key="no-info"}}
+        {{#freestyle-usage "atx-page-header-default" title="Page Header - No Info"}}
+          {{! We will create a block component to give developers more flexibility. }}
+          {{! Also try creating contextual component. }}
+          {{#atx-page-header as |pageHeader|}}
+            {{#pageHeader.title}}
+              Location
+            {{/pageHeader.title}}
+
+            {{#pageHeader.subtitle}}
+              Galvanize
+            {{/pageHeader.subtitle}}
+          {{/atx-page-header}}
+        {{/freestyle-usage}}
+      {{/collection.variant}}
+
+      {{#collection.variant key="subtitle-only"}}
+        {{#freestyle-usage "atx-page-header-subtitle-only" title="Page Header - Subtitle Only"}}
+          {{! We will create a block component to give developers more flexibility. }}
+          {{! Also try creating contextual component. }}
+          {{#atx-page-header as |pageHeader|}}
+            {{#pageHeader.subtitle}}
+              Galvanize
+            {{/pageHeader.subtitle}}
+          {{/atx-page-header}}
+        {{/freestyle-usage}}
+      {{/collection.variant}}
+
+    {{/freestyle-collection}}
+
   {{/freestyle-section}}
 {{/freestyle-guide}}
