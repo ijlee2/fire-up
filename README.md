@@ -1,56 +1,34 @@
 # fire-up
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Week 1 (May 24, 2018)
 
-## Prerequisites
+// Use pod structure
+Modify .ember-cli to add `usePods: true`
 
-You will need the following things properly installed on your computer.
+ember g controller application
+ember g template application
+    - Add {{outlet}}
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+git rm -r app/templates
+git rm -r app/controllers
 
-## Installation
+"component-driven development"
 
-* `git clone <repository-url>` this repository
-* `cd fire-up`
-* `npm install`
 
-## Running / Development
+// Install ember-freestyle
+ember install ember-freestyle
+ember s
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
+// Create a route
+ember g route component-guide
+ember g controller component-guide
 
-Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
+// Move the content of controllers/freestyle.js to component-guide/controller.js
+// Move the content of templates/freestyle.hbs to component-guide/template.hbs
+// We can remove the controllers and templates folders
 
-* `ember test`
-* `ember test --server`
 
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+// Clear the template in component-guide/template.hbs
+// Clear the controller in component-guide/controller.js after emberFreestyle
